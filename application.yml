@@ -7,3 +7,14 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+# Zipkin Configuration    
+# All the request are sampled( 1.0=100 percent)     
+management:
+  tracing:
+    sampling:
+      probability: 1.0   
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/
+      
