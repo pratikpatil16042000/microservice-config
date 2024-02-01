@@ -8,6 +8,12 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+#Logging Traces and Spans in the following format:
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"
+
+
 # Zipkin Configuration    
 # All the request are sampled( 1.0=100 percent)     
 management:
